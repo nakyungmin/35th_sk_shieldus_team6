@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">{{ region_name }} 반려동물 생활 인프라 지도</h1>
+<p class="subtitle">동물병원, 반려동물 동반시설, 공원이 어디에 얼마나 있는지 한눈에 봅니다.</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="label"><span class="dot hospital"></span>동물병원</div>
+    <div class="number">{{ "{:,}".format(total.hospitals) }}<span class="unit">곳</span></div>
+  </div>
+  <div class="card">
+    <div class="label"><span class="dot facility"></span>동반시설</div>
+    <div class="number">{{ "{:,}".format(total.facilities) }}<span class="unit">곳</span></div>
+  </div>
+  <div class="card">
+    <div class="label"><span class="dot park"></span>공원</div>
+    <div class="number">{{ "{:,}".format(total.parks) }}<span class="unit">곳</span></div>
+  </div>
+  <div class="card">
+    <div class="label"><span class="dot"></span>등록동물</div>
+    <div class="number">{{ "{:,}".format(total.registered) }}<span class="unit">마리</span></div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-head">
+    <b>시설 지도</b>
+    <div class="legend">
+      <span><i style="background: var(--hospital)"></i>동물병원</span>
+      <span><i style="background: var(--facility)"></i>동반시설</span>
+      <span><i style="background: var(--park)"></i>공원</span>
+    </div>
+  </div>
+  <iframe class="map" src="{{ url_for('static', filename='map_all.html') }}"></iframe>
+</div>
+<p class="hint">숫자가 적힌 원을 누르면 확대됩니다. 지도 오른쪽 위에서 시설 종류를 켜고 끌 수 있습니다.</p>
+{% endblock %}

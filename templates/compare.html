@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">지역별 비교</h1>
+<p class="subtitle">지표마다 값이 높은 10곳과 낮은 10곳입니다. 전체 {{ stats|length }}곳은 아래 표에 있습니다.</p>
+
+<div class="charts">
+  <img src="{{ url_for('static', filename='charts/scatter.png') }}" alt="등록동물 수와 시설 수의 관계">
+  {% for key, title, filename in charts %}
+  <img src="{{ url_for('static', filename='charts/' + filename) }}" alt="{{ title }}">
+  {% endfor %}
+  <img src="{{ url_for('static', filename='charts/facility_types.png') }}" alt="동반시설 종류별 개수">
+</div>
+
+<h2 id="table">전체 표</h2>
+<p class="hint">「{{ columns[sort] }}」 값이 큰 지역부터 보여 줍니다. 표의 제목을 누르면 그 항목으로 다시 정렬합니다.</p>
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>시도</th><th>시·군·구</th>
+      {% for key, label in columns.items() %}
+      <th class="num">
+        <a href="{{ url_for('compare', sort=key) }}#table" {% if key == sort %}class="on"{% endif %}>{{ label }}{% if key == sort %} ▼{% endif %}</a>
+      </th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in stats %}
+    <tr>
+      <td>
+        {% if s.sido == "서울특별시" %}
+        <span class="chip seoul">서울</span>
+        {% else %}
+        <span class="chip gyeonggi">경기</span>
+        {% endif %}
+      </td>
+      <td><a href="{{ url_for('city', sido=s.sido, name=s.city) }}">{{ s.city }}</a></td>
+      <td class="num">{{ "{:,}".format(s.registered) }}</td>
+      <td class="num">{{ s.hospitals }}</td>
+      <td class="num">{{ s.facilities }}</td>
+      <td class="num">{{ s.parks }}</td>
+      <td class="num">{{ s.hospitals_per_10k_pets }}</td>
+      <td class="num">{{ s.facilities_per_10k_pets }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
