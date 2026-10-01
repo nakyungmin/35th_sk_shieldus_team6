@@ -1,0 +1,6 @@
+flask
+folium
+matplotlib
+pymongo
+pyproj
+requests

@@ -1,0 +1,394 @@
+[
+ {
+  "sido": "서울특별시",
+  "city": "강남구",
+  "dogs": 34402,
+  "cats": 441,
+  "registered": 34843
+ },
+ {
+  "sido": "서울특별시",
+  "city": "강동구",
+  "dogs": 25292,
+  "cats": 223,
+  "registered": 25515
+ },
+ {
+  "sido": "서울특별시",
+  "city": "강북구",
+  "dogs": 18444,
+  "cats": 141,
+  "registered": 18585
+ },
+ {
+  "sido": "서울특별시",
+  "city": "강서구",
+  "dogs": 33280,
+  "cats": 356,
+  "registered": 33636
+ },
+ {
+  "sido": "서울특별시",
+  "city": "관악구",
+  "dogs": 26027,
+  "cats": 381,
+  "registered": 26408
+ },
+ {
+  "sido": "서울특별시",
+  "city": "광진구",
+  "dogs": 19926,
+  "cats": 346,
+  "registered": 20272
+ },
+ {
+  "sido": "서울특별시",
+  "city": "구로구",
+  "dogs": 19179,
+  "cats": 233,
+  "registered": 19412
+ },
+ {
+  "sido": "서울특별시",
+  "city": "금천구",
+  "dogs": 12791,
+  "cats": 134,
+  "registered": 12925
+ },
+ {
+  "sido": "서울특별시",
+  "city": "노원구",
+  "dogs": 26942,
+  "cats": 196,
+  "registered": 27138
+ },
+ {
+  "sido": "서울특별시",
+  "city": "도봉구",
+  "dogs": 19726,
+  "cats": 147,
+  "registered": 19873
+ },
+ {
+  "sido": "서울특별시",
+  "city": "동대문구",
+  "dogs": 18747,
+  "cats": 327,
+  "registered": 19074
+ },
+ {
+  "sido": "서울특별시",
+  "city": "동작구",
+  "dogs": 18146,
+  "cats": 363,
+  "registered": 18509
+ },
+ {
+  "sido": "서울특별시",
+  "city": "마포구",
+  "dogs": 22735,
+  "cats": 706,
+  "registered": 23441
+ },
+ {
+  "sido": "서울특별시",
+  "city": "서대문구",
+  "dogs": 17414,
+  "cats": 367,
+  "registered": 17781
+ },
+ {
+  "sido": "서울특별시",
+  "city": "서초구",
+  "dogs": 23515,
+  "cats": 271,
+  "registered": 23786
+ },
+ {
+  "sido": "서울특별시",
+  "city": "성동구",
+  "dogs": 16634,
+  "cats": 255,
+  "registered": 16889
+ },
+ {
+  "sido": "서울특별시",
+  "city": "성북구",
+  "dogs": 23921,
+  "cats": 279,
+  "registered": 24200
+ },
+ {
+  "sido": "서울특별시",
+  "city": "송파구",
+  "dogs": 33396,
+  "cats": 310,
+  "registered": 33706
+ },
+ {
+  "sido": "서울특별시",
+  "city": "양천구",
+  "dogs": 23533,
+  "cats": 237,
+  "registered": 23770
+ },
+ {
+  "sido": "서울특별시",
+  "city": "영등포구",
+  "dogs": 18695,
+  "cats": 302,
+  "registered": 18997
+ },
+ {
+  "sido": "서울특별시",
+  "city": "용산구",
+  "dogs": 17366,
+  "cats": 394,
+  "registered": 17760
+ },
+ {
+  "sido": "서울특별시",
+  "city": "은평구",
+  "dogs": 27690,
+  "cats": 315,
+  "registered": 28005
+ },
+ {
+  "sido": "서울특별시",
+  "city": "종로구",
+  "dogs": 9386,
+  "cats": 191,
+  "registered": 9577
+ },
+ {
+  "sido": "서울특별시",
+  "city": "중구",
+  "dogs": 7841,
+  "cats": 201,
+  "registered": 8042
+ },
+ {
+  "sido": "서울특별시",
+  "city": "중랑구",
+  "dogs": 22856,
+  "cats": 162,
+  "registered": 23018
+ },
+ {
+  "sido": "경기도",
+  "city": "가평군",
+  "dogs": 6324,
+  "cats": 37,
+  "registered": 6361
+ },
+ {
+  "sido": "경기도",
+  "city": "고양시",
+  "dogs": 73953,
+  "cats": 799,
+  "registered": 74752
+ },
+ {
+  "sido": "경기도",
+  "city": "과천시",
+  "dogs": 2894,
+  "cats": 47,
+  "registered": 2941
+ },
+ {
+  "sido": "경기도",
+  "city": "광명시",
+  "dogs": 20973,
+  "cats": 118,
+  "registered": 21091
+ },
+ {
+  "sido": "경기도",
+  "city": "광주시",
+  "dogs": 28452,
+  "cats": 400,
+  "registered": 28852
+ },
+ {
+  "sido": "경기도",
+  "city": "구리시",
+  "dogs": 12368,
+  "cats": 121,
+  "registered": 12489
+ },
+ {
+  "sido": "경기도",
+  "city": "군포시",
+  "dogs": 15432,
+  "cats": 178,
+  "registered": 15610
+ },
+ {
+  "sido": "경기도",
+  "city": "김포시",
+  "dogs": 30911,
+  "cats": 217,
+  "registered": 31128
+ },
+ {
+  "sido": "경기도",
+  "city": "남양주시",
+  "dogs": 50994,
+  "cats": 456,
+  "registered": 51450
+ },
+ {
+  "sido": "경기도",
+  "city": "동두천시",
+  "dogs": 7283,
+  "cats": 41,
+  "registered": 7324
+ },
+ {
+  "sido": "경기도",
+  "city": "부천시",
+  "dogs": 55995,
+  "cats": 448,
+  "registered": 56443
+ },
+ {
+  "sido": "경기도",
+  "city": "성남시",
+  "dogs": 59674,
+  "cats": 793,
+  "registered": 60467
+ },
+ {
+  "sido": "경기도",
+  "city": "수원시",
+  "dogs": 75009,
+  "cats": 766,
+  "registered": 75775
+ },
+ {
+  "sido": "경기도",
+  "city": "시흥시",
+  "dogs": 36772,
+  "cats": 197,
+  "registered": 36969
+ },
+ {
+  "sido": "경기도",
+  "city": "안산시",
+  "dogs": 48025,
+  "cats": 796,
+  "registered": 48821
+ },
+ {
+  "sido": "경기도",
+  "city": "안성시",
+  "dogs": 12390,
+  "cats": 161,
+  "registered": 12551
+ },
+ {
+  "sido": "경기도",
+  "city": "안양시",
+  "dogs": 36736,
+  "cats": 288,
+  "registered": 37024
+ },
+ {
+  "sido": "경기도",
+  "city": "양주시",
+  "dogs": 15301,
+  "cats": 104,
+  "registered": 15405
+ },
+ {
+  "sido": "경기도",
+  "city": "양평군",
+  "dogs": 12925,
+  "cats": 139,
+  "registered": 13064
+ },
+ {
+  "sido": "경기도",
+  "city": "여주시",
+  "dogs": 7752,
+  "cats": 23,
+  "registered": 7775
+ },
+ {
+  "sido": "경기도",
+  "city": "연천군",
+  "dogs": 2313,
+  "cats": 12,
+  "registered": 2325
+ },
+ {
+  "sido": "경기도",
+  "city": "오산시",
+  "dogs": 15114,
+  "cats": 92,
+  "registered": 15206
+ },
+ {
+  "sido": "경기도",
+  "city": "용인시",
+  "dogs": 66533,
+  "cats": 812,
+  "registered": 67345
+ },
+ {
+  "sido": "경기도",
+  "city": "의왕시",
+  "dogs": 8088,
+  "cats": 99,
+  "registered": 8187
+ },
+ {
+  "sido": "경기도",
+  "city": "의정부시",
+  "dogs": 31007,
+  "cats": 226,
+  "registered": 31233
+ },
+ {
+  "sido": "경기도",
+  "city": "이천시",
+  "dogs": 13285,
+  "cats": 83,
+  "registered": 13368
+ },
+ {
+  "sido": "경기도",
+  "city": "파주시",
+  "dogs": 34164,
+  "cats": 283,
+  "registered": 34447
+ },
+ {
+  "sido": "경기도",
+  "city": "평택시",
+  "dogs": 37182,
+  "cats": 475,
+  "registered": 37657
+ },
+ {
+  "sido": "경기도",
+  "city": "포천시",
+  "dogs": 13509,
+  "cats": 71,
+  "registered": 13580
+ },
+ {
+  "sido": "경기도",
+  "city": "하남시",
+  "dogs": 17412,
+  "cats": 203,
+  "registered": 17615
+ },
+ {
+  "sido": "경기도",
+  "city": "화성시",
+  "dogs": 49820,
+  "cats": 468,
+  "registered": 50288
+ }
+]
