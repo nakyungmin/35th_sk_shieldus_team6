@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PET LIFE MAP</title>
+  <!-- 글꼴(Pretendard) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <a class="logo" href="{{ url_for('index') }}">🐾 PET <span>LIFE</span> MAP</a>
+    <nav>
+      <a href="{{ url_for('index') }}" {% if request.endpoint == 'index' %}class="on"{% endif %}>지도</a>
+      <a href="{{ url_for('compare') }}" {% if request.endpoint == 'compare' %}class="on"{% endif %}>지역 비교</a>
+      <select onchange="if (this.value) location.href = '/city/' + this.value">
+        <option value="">지역 선택</option>
+        {% for sido in sido_list %}
+        <optgroup label="{{ sido }}">
+          {% for s in all_stats %}
+          {% if s.sido == sido %}
+          <option value="{{ s.sido }}/{{ s.city }}"
+            {% if info and info.sido == s.sido and info.city == s.city %}selected{% endif %}>{{ s.city }}</option>
+          {% endif %}
+          {% endfor %}
+        </optgroup>
+        {% endfor %}
+      </select>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    자료: 행정안전부 동물병원 조회서비스(API), 한국문화정보원 반려동물 동반 가능 문화시설(API),
+    농림축산검역본부 동물등록 현황(2022년 말), 전국도시공원정보표준데이터
+  </footer>
+</body>
+</html>

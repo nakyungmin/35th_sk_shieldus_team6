@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+<p class="crumb">{{ info.sido }}</p>
+<h1 class="title">{{ info.city }}</h1>
+<p class="subtitle">{{ region_name }} {{ total_regions }}개 시·군·구 가운데 이 지역의 반려동물 생활 인프라입니다.</p>
+
+<div class="cards">
+  <div class="card">
+    <div class="label"><span class="dot hospital"></span>동물병원</div>
+    <div class="number">{{ "{:,}".format(info.hospitals) }}<span class="unit">곳</span></div>
+  </div>
+  <div class="card">
+    <div class="label"><span class="dot facility"></span>동반시설</div>
+    <div class="number">{{ "{:,}".format(info.facilities) }}<span class="unit">곳</span></div>
+  </div>
+  <div class="card">
+    <div class="label"><span class="dot park"></span>공원</div>
+    <div class="number">{{ "{:,}".format(info.parks) }}<span class="unit">곳</span></div>
+  </div>
+  <div class="card">
+    <div class="label"><span class="dot"></span>등록동물</div>
+    <div class="number">{{ "{:,}".format(info.registered) }}<span class="unit">마리</span></div>
+  </div>
+</div>
+
+<div class="ranks">
+  <div class="rank">
+    <div class="label">등록동물 1만 마리당 동물병원</div>
+    <div class="row"><span class="number">{{ info.hospitals_per_10k_pets }}곳</span><span class="place">{{ total_regions }}곳 중 {{ ranks.hospitals_per_10k_pets }}위</span></div>
+    <div class="bar"><div style="width: {{ (total_regions - ranks.hospitals_per_10k_pets + 1) / total_regions * 100 }}%"></div></div>
+  </div>
+  <div class="rank">
+    <div class="label">등록동물 1만 마리당 동반시설</div>
+    <div class="row"><span class="number">{{ info.facilities_per_10k_pets }}곳</span><span class="place">{{ total_regions }}곳 중 {{ ranks.facilities_per_10k_pets }}위</span></div>
+    <div class="bar"><div style="width: {{ (total_regions - ranks.facilities_per_10k_pets + 1) / total_regions * 100 }}%"></div></div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-head">
+    <b>{{ info.city }} 시설 지도</b>
+    <div class="legend">
+      <span><i style="background: var(--hospital)"></i>동물병원</span>
+      <span><i style="background: var(--facility)"></i>동반시설</span>
+      <span><i style="background: var(--park)"></i>공원</span>
+    </div>
+  </div>
+  <iframe class="map" src="{{ url_for('city_map', sido=info.sido, name=info.city) }}"></iframe>
+</div>
+
+<h2>동반시설 {{ facilities|length }}곳</h2>
+<div class="table-wrap">
+  {% if facilities %}
+  <table>
+    <thead>
+      <tr><th>이름</th><th>종류</th><th>주소</th><th>운영시간</th></tr>
+    </thead>
+    <tbody>
+      {% for f in facilities %}
+      <tr>
+        <td><b>{{ f.name }}</b></td>
+        <td><span class="chip type">{{ f.type }}</span></td>
+        <td class="wrap">{{ f.address }}</td>
+        <td class="wrap">{{ f.hours }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty">등록된 동반시설이 없습니다.</p>
+  {% endif %}
+</div>
+{% endblock %}
