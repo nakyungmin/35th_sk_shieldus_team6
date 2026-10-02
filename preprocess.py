@@ -60,7 +60,7 @@ def region_from_address(address):
 
 # ---------- 동물등록 ----------
 def clean_registration():
-    """시·군·구별 등록 동물 수 (2022-12-31 기준)."""
+    """시·군·구별 등록 동물 수"""
     totals = {}
     for row in read_csv("registration"):
         if row["시도"] not in config.SIDO_LIST or row["시군구"] == "":
